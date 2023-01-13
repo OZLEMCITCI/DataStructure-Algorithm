@@ -21,8 +21,9 @@ public class DynamicArray <String>{
         if(initialCapacity==size){
             resize();
         }
-        for(int i=index;i<size+1;i++){
-           data[i+1]=data[i];
+        for(int i=size;i>index;i--){
+
+           data[i]=data[i-1];
         }
         data[index]=value;
         size++;
@@ -32,7 +33,7 @@ public class DynamicArray <String>{
            data[i]=data[i+1];
         }
         data[size-1]=null;
-        size++;
+        size--;
     }
     private void resize(){
         Object[] newData=new Object[2*initialCapacity];
@@ -58,5 +59,21 @@ public class DynamicArray <String>{
        if(size==initialCapacity){
            resize();
        }
+
+        data[size] = value;
+        size++;
+    }
+    public boolean isEmpty() {
+        return size == 0;
+    }
+
+    public boolean Contains(String value) {
+        for (int i = 0; i <= size -  1; i++) {
+            String currentValue = (String)data[i];
+            if (currentValue.equals(value)) {
+                return true;
+            }
+        }
+        return false;
     }
 }
