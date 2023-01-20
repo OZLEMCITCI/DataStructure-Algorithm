@@ -1,4 +1,4 @@
-package com.ds.algorithm.datastructureandalgorithm;
+package com.ds.algorithm.datastructureandalgorithm.datastructure;
 
 public class DynamicArray <String>{
      private Object[] data;

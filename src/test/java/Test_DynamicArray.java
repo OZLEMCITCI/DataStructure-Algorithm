@@ -1,5 +1,5 @@
 
-import com.ds.algorithm.datastructureandalgorithm.DynamicArray;
+import com.ds.algorithm.datastructureandalgorithm.datastructure.DynamicArray;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

@@ -1,4 +1,4 @@
-package com.ds.algorithm.datastructureandalgorithm;
+package com.ds.algorithm.datastructureandalgorithm.datastructure;
 
 public class LinkedList {
 
@@ -13,11 +13,11 @@ public class LinkedList {
     }
 
     public int getFirst() {
-
+  return 0;
     }
 
     public int getLast() {
-
+return 0;
     }
 
     public void addBack(int data) {
@@ -25,7 +25,7 @@ public class LinkedList {
     }
 
     public int size() {
-
+        return 0;
     }
 
     public void clear() {
