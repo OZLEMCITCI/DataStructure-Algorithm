@@ -1,3 +1,5 @@
+package com.ds.algorithm.datastructureandalgorithm.algorithms.datastructure;
+
 import org.junit.Assert;
 
 import com.ds.algorithm.datastructureandalgorithm.datastructure.LinkedList;
