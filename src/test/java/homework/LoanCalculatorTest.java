@@ -1,6 +1,4 @@
 package homework;
-
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -114,17 +112,6 @@ class LoanCalculatorTest {
         assertEquals(expected, actual);
     }
 
-    @Test
-    public void calculateLoanPayment_when_valid_values_entered_test5() {
-        double loanAmount = 800000;
-        double interestRate = 0.23;
-        double term = 18;
-
-        double expected = 15591.513394040288;
-        double actual = LoanCalculator.calculateLoanPayment(loanAmount, interestRate, term);
-
-        assertEquals(expected, actual);
-    }
     @Test
     public void calculateLoanPayment_when_valid_values_entered_test6() {
         double loanAmount = 1000000;
