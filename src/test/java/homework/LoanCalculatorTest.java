@@ -30,9 +30,9 @@ class LoanCalculatorTest {
     public void calculateLoanPayment_when_interest_rate_is_zero() {
         double loanAmount = 12000;
         double interestRate = 0;
-        double term = 30;
+        double term = 20;
 
-        double expected = 400;
+        double expected = 50;
         double actual = LoanCalculator.calculateLoanPayment(loanAmount, interestRate, term);
         System.out.println(actual);
 
