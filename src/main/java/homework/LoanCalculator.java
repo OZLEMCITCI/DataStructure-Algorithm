@@ -56,7 +56,20 @@ public class LoanCalculator {
         return totalInterest;
     }
 
+//original codes
+//    public static double calculateLoanBalance(double loanAmount, double interestRate, double term, double payment) {
+//        double interestRateMonthly = interestRate / 12;
+//        double numPayments = term * 12;
+//        double balance = loanAmount;
+//        for (int i = 0; i < numPayments; i++) {
+//            double interest = balance * interestRateMonthly;
+//            balance += interest - payment;
+//
+//        }
+//        return balance;
+//    }
 
+    //corrected codes
     public static double calculateLoanBalance(double loanAmount, double interestRate, double term, double payment) {
         double interestRateMonthly = interestRate / 12;
         double numPayments = term * 12;
@@ -64,14 +77,14 @@ public class LoanCalculator {
         for (int i = 0; i < numPayments; i++) {
             double interest = balance * interestRateMonthly;
             balance += interest - payment;
-            if (balance < 0.01) {
-                balance = 0;
-                break;
+            if (balance <= 0) {
+                return 0;
             }
+
         }
         return balance;
     }
-
+   // original codes
     public static int calculateLoanTerm(double loanAmount, double interestRate, double payment) {
         double interestRateMonthly = interestRate / 12;
         double balance = loanAmount;
@@ -85,13 +98,13 @@ public class LoanCalculator {
     }
 
     public static void main(String[] args) {
-        double loanAmount = 5000;
-        double interestRate = 0.2;
-        double term = 10.0;
+        double loanAmount = 120000;
+        double interestRate = 0.05;
+        double term = 30;
         double payment = calculateLoanPayment(loanAmount, interestRate, term);
         System.out.println("Loan payment: " + payment);
         System.out.println("Total interest: " + calculateInterest(loanAmount, interestRate, term));
-        System.out.println("Loan balance: " + calculateLoanBalance(loanAmount, interestRate, 30, payment));
+        System.out.println("Loan balance: " + calculateLoanBalance(loanAmount, interestRate, 20, payment));
         System.out.println("Loan term: " + calculateLoanTerm(loanAmount, interestRate, payment));
     }
 }

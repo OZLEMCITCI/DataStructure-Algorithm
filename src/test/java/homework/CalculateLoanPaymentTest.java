@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class LoanCalculatorTest {
+class CalculateLoanPaymentTest {
 
     @Test
     public void calculateLoanPayment_with_negative_inputs() {
